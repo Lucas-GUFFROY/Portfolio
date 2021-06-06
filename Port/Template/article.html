@@ -6,6 +6,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
 
 <head>
 
@@ -96,5 +99,25 @@
   </ul>
 
 </footer>
+<script>
+  $(window).on("load",function() {
+  $(window).scroll(function() {
+    var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+    $(".web").each(function() {
+      /* Check the location of each desired element */
+      var objectBottom = $(this).offset().top + $(this).outerHeight();
+
+      /* If the element is completely within bounds of the window, fade it in */
+      if (objectBottom < windowBottom) {
+        ;//object comes into view (scrolling down)
+        if ($(this).css("opacity")==0) {console.log("ICI");
+          $(this).fadeTo(400,1);}
+
+      }
+    });
+  }).scroll(); //invoke scroll-handler on page-load
+});
+
+</script>
 
 </html>

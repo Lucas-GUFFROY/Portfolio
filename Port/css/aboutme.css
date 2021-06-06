@@ -1,0 +1,23 @@
+.paragraph{
+
+  padding-left: 50px;
+  padding-right: 50px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2vw;
+  text-align: justify;
+  background-repeat: no-repeat;
+  position: relative;
+
+}
+
+.imgabout{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  height: 40%;
+}
+
+.aboutme{
+  justify-content: center;
+}
